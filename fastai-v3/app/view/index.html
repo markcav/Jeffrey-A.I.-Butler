@@ -1,0 +1,45 @@
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link rel='stylesheet' href='../static/style.css'>
+  <script src='../static/client.js'></script>
+</head>
+<body>
+<div>
+  <div class='center'>
+    <div class='title'>Say hello to Geoffrey! - An artificially intelligent butler helping you live a tidy and nag-free life.</div>
+    <img src="geoffrey.jpg" alt="Geoffrey" width="250" height="300">
+    <p>
+      With Geoffrey, no need to nag kids to clean their room, just upload your image of a room and he will determine if it's <strong>TIDY</strong> or <strong>MESSY</strong> and let your loved ones know about. 
+    </p>
+    <p>
+      Pro Tip: Works well with messy roommates, man-caves, and if you are brave - spouse's kitchen mess 
+      Disclaimer: Jeffrey is not responsible for martial disputes, USE WITH CAUTION. 
+    </p>
+    <div class='content'>
+      <div class='no-display'>
+        <input id='file-input'
+               class='no-display'
+               type='file'
+               name='file'
+               accept='image/*'
+               onchange='showPicked(this)'>
+      </div>
+      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+      <div class='upload-label'>
+        <label id='upload-label'>No file chosen</label>
+      </div>
+      <div>
+        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+      </div>
+      <div class='analyze'>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+      </div>
+      <div class='result-label'>
+        <label id='result-label'></label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
